@@ -22,16 +22,18 @@ def clearText(f_text, s_text):
         else:pass
     return f_text, s_text
 
+
 def compareFiles(f_text, s_text):
     global text_dict, text_2_dict
     f,s = clearText(f_text, s_text)
     compare_results = []
     for index,text in enumerate(f):
         text_dict[index] = text
+
     for index,text in enumerate(s):
         text_2_dict[index] = text
+
     for ind in range(0,len(text_dict)):
-        # print(text_dict[ind])
         try:
             for index, latter in enumerate(text_dict[ind]):
                 if text_dict[ind][index] is text_2_dict[ind][index]:
